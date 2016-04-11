@@ -20,7 +20,7 @@ SRC_URI += "file://0001-revert-use-new-gst-adapter-get-buffer.patch \
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.2"
+GST_VERSION_FULL ="1.9.0.1"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${SRCPV}"

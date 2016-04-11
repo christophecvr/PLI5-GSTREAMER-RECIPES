@@ -17,13 +17,12 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=master
 "
 
 SRC_URI += "file://configure-allow-to-disable-libssh2.patch \
-			file://0001-rtmp-fix-seeking-and-potential-segfault.patch \
             file://0001-Makefile.am-don-t-hardcode-libtool-name-when-running.patch \
 			file://0004-rtmp-hls-tsdemux-fix.patch \
 "
 
 S = "${WORKDIR}/git"
-GST_VERSION_FULL ="1.9.0.2"
+GST_VERSION_FULL ="1.9.0.1"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${SRCPV}"

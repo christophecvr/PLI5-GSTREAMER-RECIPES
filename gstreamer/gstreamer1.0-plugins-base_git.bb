@@ -26,7 +26,7 @@ S = "${WORKDIR}/git"
 GST_VERSION_FULL ="1.9.0.1"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
-PKGV = "${GST_VERSION_FULL}+git${SRCPV}"
+PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 do_configure_prepend() {
 	cd ${S}

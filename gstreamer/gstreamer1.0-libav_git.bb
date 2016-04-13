@@ -15,7 +15,7 @@ S = "${WORKDIR}/git"
 GST_VERSION_FULL = "1.9.0.1"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
-PKGV = "${GST_VERSION_FULL}+git${SRCPV}"
+PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 LIBAV_INCLUDED_EXLUCED = "--disable-everything \
 						--enable-decoder=wmalossless --enable-decoder=wmapro --enable-decoder=wmav1 --enable-decoder=wmav2 --enable-decoder=wmavoice"

@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=c54ce9345727175ff66d17b67ff51f58 \
 					file://COPYING.LIB;md5=6762ed442b3822387a51c92d928ead0d \
 "
 
-SRCREV = "f05ea1e6a62e12d166b6a2f2d0e4b59018515d47"
-SRCREV_common = "1b39f6d85a3d51ac6d1b44d8c821fd9b76b34454"
+SRCREV = "cf63a900a906a4219b5c97a5894e4f49fa8f11d2"
+SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-base;branch=master;name=base \

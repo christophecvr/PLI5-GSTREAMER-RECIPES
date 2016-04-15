@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=73a5855a8119deb017f5f13cf327095d \
                     file://gst/tta/crc32.h;beginline=12;endline=29;md5=27db269c575d1e5317fffca2d33b3b50 \
 "
 
-SRCREV = "65770c2af944ba2b222c74bd08dd8a1d01431149"
-SRCREV_common = "1b39f6d85a3d51ac6d1b44d8c821fd9b76b34454"
+SRCREV = "8f853cfed59fb0a38c4e5b534ab7fbe22682ca9c"
+SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=master;name=base \

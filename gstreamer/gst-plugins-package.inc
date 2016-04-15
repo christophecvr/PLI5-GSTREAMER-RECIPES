@@ -53,4 +53,3 @@ FILES_${PN} = ""
 FILES_${PN}-apps = "${bindir}"
 FILES_${PN}-glib = "${datadir}/glib-2.0"
 
-RRECOMMENDS_${PN} += "${PN}-meta"

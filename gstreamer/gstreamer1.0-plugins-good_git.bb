@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343 \
                     file://gst/replaygain/rganalysis.c;beginline=1;endline=23;md5=b60ebefd5b2f5a8e0cab6bfee391a5fe \
 "
 
-SRCREV = "bc2d4c4c3161abd8e48a5310de853fd1cc2c7cf4"
+SRCREV = "2dee0e385f57cd1a0880f155eaab8bae5fa4407e"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 

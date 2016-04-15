@@ -33,7 +33,6 @@ PACKAGECONFIG[wavpack]    = "--enable-wavpack,--disable-wavpack,wavpack"
 PACKAGECONFIG[dv1394]     = "--enable-dv1394,--disable-dv1394,libiec61883 libavc1394 libraw1394"
 PACKAGECONFIG[v4l2]       = "--enable-gst_v4l2,--disable-gst_v4l2"
 
-TARGET_CFLAGS += "-Wno-error"
 
 EXTRA_OECONF += " \
     --enable-oss \

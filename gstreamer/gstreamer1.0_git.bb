@@ -14,7 +14,8 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gstreamer;branch=master;name=
 		   git://anongit.freedesktop.org/gstreamer/common;destsuffix=git/common;name=common \
 "
 
-SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.patch"
+SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.patch
+			file:0001-revert-use-new-gst-adapter-get-buffer.patch"
 
 S = "${WORKDIR}/git"
 

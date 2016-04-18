@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6762ed442b3822387a51c92d928ead0d \
                     file://gst/gst.h;beginline=1;endline=21;md5=e059138481205ee2c6fc1c079c016d0d \
                     "
                     
-SRCREV = "3bd5aeac52a7e88860270a3e4a460409d68b50cd"
+SRCREV = "57596ad48f87bd8f468efc5dadfc66b2f654f878"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -14,8 +14,8 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gstreamer;branch=master;name=
 		   git://anongit.freedesktop.org/gstreamer/common;destsuffix=git/common;name=common \
 "
 
-SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.patch
-			file:0001-revert-use-new-gst-adapter-get-buffer.patch"
+SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.patch \
+			file://0001-revert-use-new-gst-adapter-get-buffer.patch"
 
 S = "${WORKDIR}/git"
 

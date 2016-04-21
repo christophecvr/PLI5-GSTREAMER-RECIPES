@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=73a5855a8119deb017f5f13cf327095d \
                     file://gst/tta/crc32.h;beginline=12;endline=29;md5=27db269c575d1e5317fffca2d33b3b50 \
 "
 
-SRCREV = "44ec245b48cec3800c7dcd66fd623304d5b0494f"
+SRCREV = "b66a9acdb898f39a23a7b1febc41d367d903a461"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -16,7 +16,6 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=master
            git://anongit.freedesktop.org/gstreamer/common;destsuffix=git/common;name=common \
 "
 
-PR= "r2"
 
 SRC_URI += "file://configure-allow-to-disable-libssh2.patch \
             file://0001-Makefile.am-don-t-hardcode-libtool-name-when-running.patch \

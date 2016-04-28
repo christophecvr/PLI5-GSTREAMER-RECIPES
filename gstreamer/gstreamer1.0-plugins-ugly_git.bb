@@ -16,7 +16,7 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-ugly;branch=maste
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1"
+GST_VERSION_FULL ="1.9.0.1-00"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

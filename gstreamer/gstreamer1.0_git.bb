@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6762ed442b3822387a51c92d928ead0d \
                     file://gst/gst.h;beginline=1;endline=21;md5=e059138481205ee2c6fc1c079c016d0d \
                     "
                     
-SRCREV = "2076be19ed1b253f7f4e3c2b7e7653f81b7bce91"
+SRCREV = "8177173db0c005955cf931ad6aff35fd834b3e3c"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -19,7 +19,7 @@ SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.pat
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1"
+GST_VERSION_FULL ="1.9.0.1-00"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

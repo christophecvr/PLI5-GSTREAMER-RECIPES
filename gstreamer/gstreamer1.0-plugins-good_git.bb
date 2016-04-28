@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343 \
                     file://gst/replaygain/rganalysis.c;beginline=1;endline=23;md5=b60ebefd5b2f5a8e0cab6bfee391a5fe \
 "
 
-SRCREV = "cde45a41a52b12776a7874715c271d41d3497664"
+SRCREV = "e538608b3f90539003de21c1db238f3c9b946e30"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -18,7 +18,7 @@ SRC_URI += "file://0001-gstrtpmp4gpay-set-dafault-value-for-MPEG4-without-co.pat
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1"
+GST_VERSION_FULL ="1.9.0.1-00"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

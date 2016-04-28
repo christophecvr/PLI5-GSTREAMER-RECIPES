@@ -6,13 +6,13 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
                     file://COPYING.LIB;md5=6762ed442b3822387a51c92d928ead0d \
                     file://ext/libav/gstav.h;beginline=1;endline=18;md5=a752c35267d8276fd9ca3db6994fca9c"
 
-SRCREV = "ae3a80eec7129bc9f6d812ecfbe857ccd5b6c74f"
+SRCREV = "151cd32a10ee3636fd65a6e1f361849c06ecb732"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-libav;branch=master"
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL = "1.9.0.1"
+GST_VERSION_FULL = "1.9.0.1-00"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

@@ -22,11 +22,11 @@ SRC_URI += "file://configure-allow-to-disable-libssh2.patch \
 			file://0004-rtmp-hls-tsdemux-fix.patch \
 			file://fix-maybe-uninitialized-warnings-when-compiling-with-Os.patch \
 			file://hls-use-max-playlist-quality.patch \
-			file://revert-adaptif-streaming-gst-plugins-bad.patch \
+			file://0006-adaptive-demux.patch \
 "
 
 S = "${WORKDIR}/git"
-GST_VERSION_FULL ="1.9.0.1-00"
+GST_VERSION_FULL ="1.9.0.1-01"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

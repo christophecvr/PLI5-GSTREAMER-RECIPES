@@ -1,0 +1,23 @@
+From 5724b1fb8e0a44fb4d5cb6870f49745ef786e5a2 Mon Sep 17 00:00:00 2001
+From: christophecvr <stefansat@telenet.be>
+Date: Mon, 2 May 2016 12:16:51 +0200
+Subject: [PATCH] Change ffmpeg url
+
+	modified:   .gitmodules
+---
+ .gitmodules | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/.gitmodules b/.gitmodules
+index fa4d7ec..0db0e93 100644
+--- a/.gitmodules
++++ b/.gitmodules
+@@ -3,4 +3,4 @@
+         url = git://anongit.freedesktop.org/gstreamer/common
+ [submodule "gst-libs/ext/libav"]
+         path = gst-libs/ext/libav
+-        url = git://source.ffmpeg.org/ffmpeg.git
++        url = git://github.com/FFmpeg/FFmpeg.git
+-- 
+1.9.1
+

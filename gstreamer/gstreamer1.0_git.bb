@@ -1,4 +1,4 @@
-DEFAULT_PREFERENCE = "1"
+DEFAULT_PREFERENCE = "-1"
 
 include gstreamer1.0.inc
 
@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6762ed442b3822387a51c92d928ead0d \
                     file://gst/gst.h;beginline=1;endline=21;md5=e059138481205ee2c6fc1c079c016d0d \
                     "
                     
-SRCREV = "8177173db0c005955cf931ad6aff35fd834b3e3c"
+SRCREV = "30ee36e6301159b1dd9020c05c64cc0a9aa0355f"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -26,8 +26,6 @@ PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 
 do_configure_prepend() {
-	cd ${S}
-	./autogen.sh --noconfigure
-	cd ${B}
+	${S}/autogen.sh --noconfigure
 }
 

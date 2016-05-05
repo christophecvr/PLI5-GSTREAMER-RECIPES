@@ -1,4 +1,4 @@
-DEFAULT_PREFERENCE = "1"
+DEFAULT_PREFERENCE = "-1"
 
 include gstreamer1.0-plugins-ugly.inc
 
@@ -22,8 +22,6 @@ PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 do_configure_prepend() {
-	cd ${S}
-	./autogen.sh --noconfigure
-	cd ${B}
+	${S}/autogen.sh --noconfigure
 }
 

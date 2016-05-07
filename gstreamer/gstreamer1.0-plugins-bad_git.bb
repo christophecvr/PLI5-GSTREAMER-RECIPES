@@ -8,7 +8,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=73a5855a8119deb017f5f13cf327095d \
                     file://gst/tta/crc32.h;beginline=12;endline=29;md5=27db269c575d1e5317fffca2d33b3b50 \
 "
 
-SRCREV = "5498e97a11c2627af22560cdc949d8f95883210e"
+UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
+
+SRCREV_base = "5b1191cb4c08e17c56a097e9ed1ed58becb2bb93"
 SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
 SRCREV_FORMAT = "base"
 
@@ -23,7 +25,6 @@ SRC_URI += "file://configure-allow-to-disable-libssh2.patch \
 			file://0004-rtmp-hls-tsdemux-fix.patch \
 			file://fix-maybe-uninitialized-warnings-when-compiling-with-Os.patch \
 			file://hls-use-max-playlist-quality.patch \
-			file://0006-adaptive-demux.patch \
 "
 S = "${WORKDIR}/git"
 

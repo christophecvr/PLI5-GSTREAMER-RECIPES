@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343 \
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "8f7962e1c3178bb6f84c7d9d06e3172ae7dfd273"
-SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
+SRCREV_base = "6542edd9098aad98c0ac18f0ba5a4650932e14e1"
+SRCREV_common = "d01567411258358ddc6f632bf0ed2363a36ca795"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-good;branch=master;name=base \
@@ -20,7 +20,7 @@ SRC_URI += "file://0001-gstrtpmp4gpay-set-dafault-value-for-MPEG4-without-co.pat
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1-00"
+GST_VERSION_FULL ="1.9.90-01"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

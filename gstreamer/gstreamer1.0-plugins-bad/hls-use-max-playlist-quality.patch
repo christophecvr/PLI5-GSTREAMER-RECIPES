@@ -1,16 +1,30 @@
-Use max playlist quality if connection speed not set.
-Based on christophecvr idea: http://forums.openpli.org/topic/29501-gstreamer-10/page-119#entry542926
+From ef89422267524785b99409da3489ea09394d1e94 Mon Sep 17 00:00:00 2001
+From: christophecvr <stefansat@telenet.be>
+Date: Wed, 12 Oct 2016 11:35:01 +0200
+Subject: [PATCH] Use max playlist quality if connection speed not set.
+Based on christophecvr idea:
+http://forums.openpli.org/topic/29501-gstreamer-10/page-119#entry542926
 
---- a/ext/hls/gsthlsdemux.c	2016-04-16 16:44:26.243459435 +0300
-+++ b/ext/hls/gsthlsdemux.c	2016-04-16 19:54:38.988052168 +0300
-@@ -421,6 +421,10 @@
-     GstM3U8 *child = NULL;
-     GError *err = NULL;
+	modified:   ext/hls/gsthlsdemux.c
+---
+ ext/hls/gsthlsdemux.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/ext/hls/gsthlsdemux.c b/ext/hls/gsthlsdemux.c
+index a4eaacd..ba5fac5 100644
+--- a/ext/hls/gsthlsdemux.c
++++ b/ext/hls/gsthlsdemux.c
+@@ -587,6 +587,10 @@ gst_hls_demux_process_manifest (GstAdaptiveDemux * demux, GstBuffer * buf)
+     return FALSE;
+   }
  
-+    /* use max playlist quality if connection speed not set */
-+    if (demux->connection_speed == 0)
-+      demux->connection_speed = 4294967;
++  /* use max playlist quality if connection speed not set */
++  if (demux->connection_speed == 0)
++    demux->connection_speed = 4294967;
 +
-     if (demux->connection_speed == 0) {
-       GST_M3U8_CLIENT_LOCK (hlsdemux->client);
-       child = hlsdemux->client->main->current_variant->data;
+   /* select the initial variant stream */
+   if (demux->connection_speed == 0) {
+     variant = hlsdemux->master->default_variant;
+-- 
+2.7.4
+

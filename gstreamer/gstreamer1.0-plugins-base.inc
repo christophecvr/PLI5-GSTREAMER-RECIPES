@@ -14,7 +14,7 @@ PACKAGES_DYNAMIC =+ "^libgst.*"
 PACKAGECONFIG ??= " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'alsa', 'alsa', '', d)} \
-    orc ivorbis ogg theora vorbis cdparanoia \
+    orc ivorbis ogg theora vorbis cdparanoia pango \
     "
 
 X11DEPENDS = "virtual/libx11 libsm libxrender"
@@ -33,6 +33,7 @@ PACKAGECONFIG[cdparanoia]   = "--enable-cdparanoia,--disable-cdparanoia,cdparano
 
 EXTRA_OECONF += " \
     --enable-zlib \
+	--enable-subtitleoverlay \
     "
     
 CACHED_CONFIGUREVARS_append_i586 = " ac_cv_header_emmintrin_h=no ac_cv_header_xmmintrin_h=no"

@@ -9,8 +9,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=6762ed442b3822387a51c92d928ead0d \
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "246b28578369d54cf1e5368aad7c0c609d913c31"
-SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
+SRCREV_base = "6d0d350a94ba6b4e7775a8321bd2a29e889cbc21"
+SRCREV_common = "d01567411258358ddc6f632bf0ed2363a36ca795"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gstreamer;branch=master;name=base \
@@ -22,7 +22,7 @@ SRC_URI += "file://0001-introspection.m4-prefix-pkgconfig-paths-with-PKG_CON.pat
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1-00"
+GST_VERSION_FULL ="1.9.90-01"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

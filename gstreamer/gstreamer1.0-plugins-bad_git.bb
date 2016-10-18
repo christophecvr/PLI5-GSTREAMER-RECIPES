@@ -10,8 +10,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=73a5855a8119deb017f5f13cf327095d \
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "5b1191cb4c08e17c56a097e9ed1ed58becb2bb93"
-SRCREV_common = "ac2f647695e7bd4b433ea108ee1d0e23901797d4"
+SRCREV_base = "ee70f830a870cdc8cc80c0dc3001bb3e329236f5"
+SRCREV_common = "d01567411258358ddc6f632bf0ed2363a36ca795"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=master;name=base \
@@ -28,7 +28,7 @@ SRC_URI += "file://configure-allow-to-disable-libssh2.patch \
 "
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.0.1-00"
+GST_VERSION_FULL ="1.9.90-02"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

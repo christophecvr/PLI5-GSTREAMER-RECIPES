@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343 \
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "6542edd9098aad98c0ac18f0ba5a4650932e14e1"
+SRCREV_base = "1dc1ee2ae34574fd764a913dcb499dc1e36b8a26"
 SRCREV_common = "d01567411258358ddc6f632bf0ed2363a36ca795"
 SRCREV_FORMAT = "base"
 
@@ -20,7 +20,7 @@ SRC_URI += "file://0001-gstrtpmp4gpay-set-dafault-value-for-MPEG4-without-co.pat
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.9.90-01"
+GST_VERSION_FULL ="1.9.90-04"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

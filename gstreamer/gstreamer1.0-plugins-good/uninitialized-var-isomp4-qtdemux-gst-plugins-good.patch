@@ -1,0 +1,28 @@
+From 8cdca971c6e4a134554a3a934ddb99298a274d39 Mon Sep 17 00:00:00 2001
+From: christophecvr <stefansat@telenet.be>
+Date: Sat, 19 Nov 2016 11:29:33 +0100
+Subject: [PATCH] Gstreamer-plugins-good compile error maybe-uninitialized
+
+ The last master plugins good tries to use a var which could be uninitialized.
+ Just intitialized the var with 0 cause it's a guint32.
+
+	modified:   gst/isomp4/qtdemux.c
+---
+ gst/isomp4/qtdemux.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/gst/isomp4/qtdemux.c b/gst/isomp4/qtdemux.c
+index b66c34c..01fb406 100644
+--- a/gst/isomp4/qtdemux.c
++++ b/gst/isomp4/qtdemux.c
+@@ -10149,6 +10149,7 @@ qtdemux_parse_trak (GstQTDemux * qtdemux, GNode * trak)
+               off_t offset = min_size;
+               while (offset + 8 < len) {
+                 guint32 size, tag;
++                size = 0;
+                 ok = gst_byte_reader_get_uint32_le (&br, &size);
+                 ok &= gst_byte_reader_get_uint32_le (&br, &tag);
+                 if (!ok || size < 8) {
+-- 
+2.7.4
+

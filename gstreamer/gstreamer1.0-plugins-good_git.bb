@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343 \
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "7d2a07076efd385022f9afc453837b99bd92ab2b"
-SRCREV_common = "d01567411258358ddc6f632bf0ed2363a36ca795"
+SRCREV_base = "b8265e95a7c75f7a932a421419d6eeda67645d8e"
+SRCREV_common = "1416c1683f48bd3aac9d4d4f95678e337be59ad7"
 SRCREV_FORMAT = "base"
 
 SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-good;branch=master;name=base \
@@ -17,12 +17,12 @@ SRC_URI = "git://anongit.freedesktop.org/gstreamer/gst-plugins-good;branch=maste
 "
 
 SRC_URI += "file://0001-gstrtpmp4gpay-set-dafault-value-for-MPEG4-without-co.patch \
-			file://uninitialized-var-isomp4-qtdemux-gst-plugins-good.patch \
+			file://gst-plugins-good-compile-maybe-uninitialized-error.patch \
 "
 
 S = "${WORKDIR}/git"
 
-GST_VERSION_FULL ="1.11.0.1-01"
+GST_VERSION_FULL ="1.11.0.1-02"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

@@ -21,7 +21,7 @@ SRC_URI = " \
     file://0001-Disable-yasm-for-libav-when-disable-yasm.patch \
  "
 
-GST_VERSION_FULL ="1.11.0.1-02"
+GST_VERSION_FULL ="1.11.0.1-03"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"

@@ -21,16 +21,16 @@ SRC_URI = " \
     file://0001-Disable-yasm-for-libav-when-disable-yasm.patch \
  "
 
-GST_VERSION_FULL ="1.11.0.1-03"
+GST_VERSION_FULL ="1.11.0.1-07"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "ac4a47bacbcfd62e6330fc6b79c4456bfaf4511b"
-SRCREV_common = "1416c1683f48bd3aac9d4d4f95678e337be59ad7"
-SRCREV_ffmpeg = "ebf8ec5b0fdc0b79602312feecbe9f1797e90033"
+SRCREV_base = "4759bed80114d7b6f54c7240296bf10d296f2898"
+SRCREV_common = "39ac2f563e12d22100e320c95aaab8d8e5812ca9"
+SRCREV_ffmpeg = "c269c43a83166003ab6649263bc60634a6b7866f"
 #SRCREV_ffmpeg = "c66f4d1ae64dffaf456d05cbdade02054446f499"
 SRCREV_FORMAT = "base"
 

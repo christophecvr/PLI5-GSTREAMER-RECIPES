@@ -21,14 +21,14 @@ SRC_URI = " \
     file://0001-Disable-yasm-for-libav-when-disable-yasm.patch \
  "
 
-GST_VERSION_FULL ="1.11.0.1-07"
+GST_VERSION_FULL ="1.11.0.1-12"
 inherit gitpkgv
 PV = "${GST_VERSION_FULL}+git${SRCPV}"
 PKGV = "${GST_VERSION_FULL}+git${GITPKGV}"
 
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>(\d+(\.\d+)+))"
 
-SRCREV_base = "4759bed80114d7b6f54c7240296bf10d296f2898"
+SRCREV_base = "cfd750395904bd3d0d4da1f9ba46851b4658d25c"
 SRCREV_common = "39ac2f563e12d22100e320c95aaab8d8e5812ca9"
 SRCREV_ffmpeg = "c269c43a83166003ab6649263bc60634a6b7866f"
 #SRCREV_ffmpeg = "c66f4d1ae64dffaf456d05cbdade02054446f499"
@@ -38,10 +38,15 @@ LIBAV_INCLUDED_EXLUCED = "--disable-everything \
 						--enable-decoder=wmalossless --enable-decoder=wmapro --enable-decoder=wmav1 --enable-decoder=wmav2 --enable-decoder=wmavoice"
 
 
+SRC_URI_append_sh4 = " \
+    file://libav-fix-sh4-compile-gcc48.patch \
+"
+
 LIBAV_EXTRA_CONFIGURE_COMMON_ARG = "--target-os=linux \
 	--cc='${CC}' --as='${CC}' --ld='${CC}' --nm='${NM}' --ar='${AR}' \
 	--ranlib='${RANLIB}' \
 	${GSTREAMER_1_0_DEBUG} \
+	${@bb.utils.contains('TARGET_FPU', 'soft', '--disable-mipsfpu', '--enable-mipsfpu', d)} \
 	--disable-mipsdsp \
 	--disable-mipsdspr2 \
 	${LIBAV_INCLUDED_EXLUCED} \
